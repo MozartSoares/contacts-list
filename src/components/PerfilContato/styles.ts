@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import variaveis from "../../styles/variaveis";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
@@ -7,7 +6,7 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 66px;
-`;
+`
 
 export const InfosContainer = styled.div`
   display: flex;
@@ -15,4 +14,4 @@ export const InfosContainer = styled.div`
   margin-top: 10px;
   row-gap: 5px;
   text-align: left;
-`;
+`

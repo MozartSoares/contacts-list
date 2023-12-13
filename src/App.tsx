@@ -1,6 +1,6 @@
-import BarraLateral from "./containers/BarraLateral";
-import EstiloGlobal, { ContainerGlobal } from "./styles";
-import Main from "./containers/Main";
+import BarraLateral from './containers/BarraLateral'
+import EstiloGlobal, { ContainerGlobal } from './styles'
+import Main from './containers/Main'
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Main />
       </ContainerGlobal>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,17 +1,21 @@
-export const dataSvg = (
+export const emailSvg = (
   <svg
-    width="22"
-    height="22"
-    viewBox="0 0 22 22"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
   >
-    <path
-      d="M15.5833 2.75001H19.25C19.4931 2.75001 19.7263 2.84658 19.8982 3.01849C20.0701 3.1904 20.1666 3.42356 20.1666 3.66667V18.3333C20.1666 18.5765 20.0701 18.8096 19.8982 18.9815C19.7263 19.1534 19.4931 19.25 19.25 19.25H2.74998C2.50686 19.25 2.27371 19.1534 2.1018 18.9815C1.92989 18.8096 1.83331 18.5765 1.83331 18.3333V3.66667C1.83331 3.42356 1.92989 3.1904 2.1018 3.01849C2.27371 2.84658 2.50686 2.75001 2.74998 2.75001H6.41665V0.916672H8.24998V2.75001H13.75V0.916672H15.5833V2.75001ZM13.75 4.58334H8.24998V6.41667H6.41665V4.58334H3.66665V8.25001H18.3333V4.58334H15.5833V6.41667H13.75V4.58334ZM18.3333 10.0833H3.66665V17.4167H18.3333V10.0833Z"
-      fill="#7C7C7C"
-    />
+    <rect x="2" y="6" width="20" height="12" rx="2" ry="2"></rect>
+    <line x1="2" y1="6" x2="22" y2="6"></line>
+    <line x1="6" y1="18" x2="6" y2="6"></line>
+    <line x1="18" y1="18" x2="18" y2="6"></line>
   </svg>
-);
+)
 
 export const foneSvg = (
   <svg
@@ -26,7 +30,7 @@ export const foneSvg = (
       fill="#7C7C7C"
     />
   </svg>
-);
+)
 
 export const descSvg = (
   <svg
@@ -41,7 +45,7 @@ export const descSvg = (
       fill="#7C7C7C"
     />
   </svg>
-);
+)
 
 export const addSvg = (
   <svg
@@ -56,4 +60,17 @@ export const addSvg = (
       fill="#303030"
     />
   </svg>
-);
+)
+
+export const lixeiraSvg = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    x="0px"
+    y="0px"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+  >
+    <path d="M 10 2 L 9 3 L 3 3 L 3 5 L 21 5 L 21 3 L 15 3 L 14 2 L 10 2 z M 4.3652344 7 L 6.0683594 22 L 17.931641 22 L 19.634766 7 L 4.3652344 7 z"></path>
+  </svg>
+)
