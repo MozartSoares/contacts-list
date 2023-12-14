@@ -1,6 +1,6 @@
 import { ChangeEvent, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Campo, FotoContato, InfoContato, NomeContato } from '../../styles'
+import { FotoContato, InfoContato, NomeContato } from '../../styles'
 import { descSvg, emailSvg, foneSvg } from '../../utils/svg'
 import * as S from './styles'
 import { editarContato } from '../../store/Contatos'
@@ -100,7 +100,7 @@ const PerfilContato: React.FC<PerfilProps> = ({ isEditMode, onSalvar }) => {
             onChange={handleInputChange}
           />
         ) : (
-          contatoSelecionado.nome
+          `${contatoSelecionado.nome}`
         )}
       </NomeContato>
       <InfoContato>
@@ -113,7 +113,7 @@ const PerfilContato: React.FC<PerfilProps> = ({ isEditMode, onSalvar }) => {
             onChange={handleInputChange}
           />
         ) : (
-          contatoSelecionado.apelido
+          `${contatoSelecionado.apelido}`
         )}
       </InfoContato>
       <S.InfosContainer>
@@ -129,21 +129,22 @@ const PerfilContato: React.FC<PerfilProps> = ({ isEditMode, onSalvar }) => {
               onChange={handleInputChange}
             />
           ) : (
-            contatoSelecionado.telefone
+            `${contatoSelecionado.telefone}`
           )}
         </InfoContato>
         <InfoContato>
-          {emailSvg}
+          <label htmlFor="email">{emailSvg}</label>
           {isEditMode ? (
             <S.CampoSelecionado
               placeholder="Email do contato"
               type="text"
+              id="email"
               name="email"
               value={email}
               onChange={handleInputChange}
             />
           ) : (
-            ` ${contatoSelecionado.email}`
+            `${contatoSelecionado.email}`
           )}
         </InfoContato>
         <InfoContato>
