@@ -8,6 +8,9 @@ export const Aside = styled.aside`
   flex-direction: column;
   align-items: center;
   background-color: ${variaveis.corFundoAside};
+  @media (max-width: 768px) {
+    padding-bottom: 10px;
+  }
 `
 
 export const ContainerTitulo = styled.div`
@@ -34,6 +37,12 @@ export const ContainerPerfil = styled.div`
   margin-top: 2vh;
   border: solid 3px ${variaveis.corDeFundoHeader};
   border-radius: 20px;
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+    width: 90%;
+    overflow: auto;
+    text-align: center;
+  }
 `
 export const BotaoEditar = styled(BotaoSalvar)`
   background-color: ${variaveis.corBotaoEditar};

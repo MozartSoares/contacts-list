@@ -13,11 +13,19 @@ export const Header = styled.header`
   align-items: center;
   background-color: ${variaveis.corDeFundoHeader};
   margin-bottom: 15px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 25vh;
+  }
 `
 
 export const TituloLista = styled(Titulo)`
   font-size: 24px;
   margin-left: 34px;
+  @media (max-width: 768px) {
+    margin: 15px 0 20px 0;
+  }
 `
 export const BotaoAdicionar = styled.button`
   height: 52px;
@@ -34,15 +42,9 @@ export const BotaoAdicionar = styled.button`
   &:hover {
     transform: scale(1.1);
   }
-`
-
-export const Campo = styled.input`
-  padding: 8px;
-  background-color: #eee;
-  border-radius: 8px;
-  border: none;
-  width: 50%;
-  font-weight: bold;
-  color: #000;
-  border-color: #666666;
+  @media (max-width: 768px) {
+    margin: 10px 0 20px 0;
+    height: 68px;
+    width: 68px;
+  }
 `

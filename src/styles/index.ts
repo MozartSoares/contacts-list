@@ -15,6 +15,10 @@ export const ContainerGlobal = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr;
   height: 100vh;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `
 
 export const Titulo = styled.h1`
@@ -31,11 +35,11 @@ export const FotoContato = styled.img`
 
 export const InfoContato = styled.p`
   color: ${variaveis.corInfoContato};
+  @media (max-width: 768px) {
+    margin: 10px 0;
+  }
 `
 
-export const NomeContato = styled.h3`
-  font-family: ${variaveis.fonteSecundaria};
-`
 export const Campo = styled.input`
   padding: 8px;
   background-color: #eee;
@@ -45,6 +49,13 @@ export const Campo = styled.input`
   font-weight: bold;
   color: #000;
   border-color: #666666;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+`
+
+export const NomeContato = styled.h3`
+  font-family: ${variaveis.fonteSecundaria};
 `
 
 export const Botao = styled.button`
@@ -60,6 +71,9 @@ export const Botao = styled.button`
   cursor: pointer;
   &:hover {
     transform: scale(1.1);
+  }
+  @media (max-width: 768px) {
+    margin: 0;
   }
 `
 

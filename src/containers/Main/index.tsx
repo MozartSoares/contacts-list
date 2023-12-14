@@ -5,16 +5,11 @@ import CardContato from '../../components/CardContato'
 import { addSvg } from '../../utils/svg'
 import ModalContato from '../../components/ModalContato'
 
-import {
-  Header,
-  TituloLista,
-  BotaoAdicionar,
-  Campo,
-  ContainerMain
-} from './styles'
+import * as S from './styles'
 
 import { RootReducer } from '../../store'
 import { alteraTermo } from '../../store/Busca'
+import { Campo } from '../../styles'
 
 const Main = () => {
   const dispatch = useDispatch()
@@ -61,18 +56,18 @@ const Main = () => {
     })
 
   return (
-    <ContainerMain>
-      <Header>
-        <TituloLista>Lista de contatos</TituloLista>
+    <S.ContainerMain>
+      <S.Header>
+        <S.TituloLista>Lista de contatos</S.TituloLista>
         <Campo
           placeholder="buscar"
           value={termo}
           onChange={(e) => dispatch(alteraTermo(e.target.value))}
         />
-        <BotaoAdicionar type="button" onClick={openModal}>
+        <S.BotaoAdicionar type="button" onClick={openModal}>
           {addSvg}
-        </BotaoAdicionar>
-      </Header>
+        </S.BotaoAdicionar>
+      </S.Header>
       <div>
         <ul>
           {contatosOrdenadosAlfabeticamente.map((c) => (
@@ -91,7 +86,7 @@ const Main = () => {
         </ul>
       </div>
       <ModalContato isOpen={modalIsOpen} closeModal={closeModal} />
-    </ContainerMain>
+    </S.ContainerMain>
   )
 }
 

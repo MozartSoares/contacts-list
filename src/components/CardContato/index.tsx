@@ -1,12 +1,7 @@
 import { useDispatch } from 'react-redux'
 
-import {
-  Botao as BotaoVisualizar,
-  FotoContato,
-  InfoContato,
-  NomeContato
-} from '../../styles'
-import { ContainerCard, BotaoRemover } from './styles'
+import { FotoContato, InfoContato, NomeContato } from '../../styles'
+import * as S from './styles'
 import ContatoClass from '../../models/contato'
 import { remover, selecionarContato } from '../../store/Contatos'
 import { lixeiraSvg } from '../../utils/svg'
@@ -37,7 +32,7 @@ const CardContato = ({
   }
 
   return (
-    <ContainerCard>
+    <S.ContainerCard>
       <FotoContato src={foto} />
       <div>
         <NomeContato>{nome}</NomeContato>
@@ -45,11 +40,13 @@ const CardContato = ({
       </div>
       <NomeContato>{telefone}</NomeContato>
       <InfoContato>{email}</InfoContato>
-      <BotaoVisualizar onClick={() => handleVisualizarContato()}>
+      <S.BotaoVisualizar onClick={() => handleVisualizarContato()}>
         Visualizar
-      </BotaoVisualizar>
-      <BotaoRemover onClick={handleRemoverContato}>{lixeiraSvg}</BotaoRemover>
-    </ContainerCard>
+      </S.BotaoVisualizar>
+      <S.BotaoRemover onClick={handleRemoverContato}>
+        {lixeiraSvg}
+      </S.BotaoRemover>
+    </S.ContainerCard>
   )
 }
 

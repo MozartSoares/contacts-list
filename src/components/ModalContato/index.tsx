@@ -14,13 +14,11 @@ import {
   ContainerCardPreview,
   FormularioCadastro,
   BotaoSalvar,
-  InputFotoContainer,
   PreviewContainer,
   TituloCadastro,
   BotaoFechar
 } from './styles'
 import { FotoContato, InfoContato, NomeContato } from '../../styles'
-import { Campo } from '../../containers/Main/styles'
 
 interface ModalContatoProps {
   isOpen: boolean
