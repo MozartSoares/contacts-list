@@ -26,6 +26,7 @@ export const Titulo = styled.h1`
 export const FotoContato = styled.img`
   border-radius: 50%;
   max-width: 90px;
+  max-height: 90px;
 `
 
 export const InfoContato = styled.p`
