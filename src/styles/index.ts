@@ -35,5 +35,31 @@ export const InfoContato = styled.p`
 export const NomeContato = styled.h3`
   font-family: ${variaveis.fonteSecundaria};
 `
+export const Campo = styled.input`
+  padding: 8px;
+  background-color: #eee;
+  border-radius: 8px;
+  border: none;
+  width: 50%;
+  font-weight: bold;
+  color: #000;
+  border-color: #666666;
+`
+
+export const Botao = styled.button`
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  color: #000;
+  background-color: ${variaveis.corDeFundoHeader};
+  border-radius: 8px;
+  margin-right: 16px;
+  display: inline-block;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+`
 
 export default EstiloGlobal

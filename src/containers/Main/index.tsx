@@ -28,7 +28,7 @@ const Main = () => {
     let contatosFiltrados = lista
     if (termo !== undefined) {
       contatosFiltrados = contatosFiltrados.filter(
-        (lista) => lista.nome.toLowerCase().search(termo.toLowerCase()) >= 0
+        (contato) => contato.nome.toLowerCase().search(termo.toLowerCase()) >= 0
       )
       return contatosFiltrados
     } else {

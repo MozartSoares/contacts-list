@@ -6,5 +6,7 @@ export default {
   corDeFundoHeader: '#e17055',
   corBotaoAdicionar: '#55C875',
   corDeFundoMain: '#f19066',
-  corDeFundoCard: '#fdcb6e'
+  corDeFundoCard: '#fdcb6e',
+  corBotaoFechar: '#e74c3c',
+  corBotaoEditar: '#2980b9'
 }

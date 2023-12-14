@@ -1,7 +1,12 @@
 import { useDispatch } from 'react-redux'
 
-import { FotoContato, InfoContato, NomeContato } from '../../styles'
-import { BotaoVisualizar, ContainerCard, BotaoRemover } from './styles'
+import {
+  Botao as BotaoVisualizar,
+  FotoContato,
+  InfoContato,
+  NomeContato
+} from '../../styles'
+import { ContainerCard, BotaoRemover } from './styles'
 import ContatoClass from '../../models/contato'
 import { remover, selecionarContato } from '../../store/Contatos'
 import { lixeiraSvg } from '../../utils/svg'
@@ -20,7 +25,6 @@ const CardContato = ({
   const dispatch = useDispatch()
 
   const handleVisualizarContato = () => {
-    console.log(id)
     dispatch(
       selecionarContato({ nome, apelido, telefone, email, foto, sobre, id })
     )

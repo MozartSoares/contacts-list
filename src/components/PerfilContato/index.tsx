@@ -1,11 +1,12 @@
 import { ChangeEvent, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { FotoContato, InfoContato, NomeContato } from '../../styles'
+import { Campo, FotoContato, InfoContato, NomeContato } from '../../styles'
 import { descSvg, emailSvg, foneSvg } from '../../utils/svg'
 import * as S from './styles'
 import { editarContato } from '../../store/Contatos'
 import ContatoClass from '../../models/contato'
 import { RootReducer } from '../../store'
+import { BotaoSalvar } from '../ModalContato/styles'
 
 type PerfilProps = {
   isEditMode: boolean
@@ -91,7 +92,8 @@ const PerfilContato: React.FC<PerfilProps> = ({ isEditMode, onSalvar }) => {
       )}
       <NomeContato>
         {isEditMode ? (
-          <input
+          <S.CampoSelecionado
+            placeholder="Nome do contato"
             type="text"
             name="nome"
             value={nome}
@@ -103,7 +105,8 @@ const PerfilContato: React.FC<PerfilProps> = ({ isEditMode, onSalvar }) => {
       </NomeContato>
       <InfoContato>
         {isEditMode ? (
-          <input
+          <S.CampoSelecionado
+            placeholder="Apelido do contato"
             type="text"
             name="apelido"
             value={apelido}
@@ -115,9 +118,11 @@ const PerfilContato: React.FC<PerfilProps> = ({ isEditMode, onSalvar }) => {
       </InfoContato>
       <S.InfosContainer>
         <InfoContato>
-          {foneSvg}
+          <label htmlFor="telefone">{foneSvg}</label>
           {isEditMode ? (
-            <input
+            <S.CampoSelecionado
+              placeholder="Telefone do contato"
+              id="telefone"
               type="tel"
               name="telefone"
               value={telefone}
@@ -130,7 +135,8 @@ const PerfilContato: React.FC<PerfilProps> = ({ isEditMode, onSalvar }) => {
         <InfoContato>
           {emailSvg}
           {isEditMode ? (
-            <input
+            <S.CampoSelecionado
+              placeholder="Email do contato"
               type="text"
               name="email"
               value={email}
@@ -143,15 +149,21 @@ const PerfilContato: React.FC<PerfilProps> = ({ isEditMode, onSalvar }) => {
         <InfoContato>
           {descSvg}
           {isEditMode ? (
-            <textarea name="sobre" value={sobre} onChange={handleInputChange} />
+            <S.CampoSelecionadoTextarea
+              placeholder="Descrição do contato"
+              as="textarea"
+              name="sobre"
+              value={sobre}
+              onChange={handleInputChange}
+            />
           ) : (
             ` ${contatoSelecionado.sobre}`
           )}
         </InfoContato>
         {isEditMode && (
-          <button type="button" onClick={handleSalvar}>
+          <BotaoSalvar type="button" onClick={handleSalvar}>
             Salvar
-          </button>
+          </BotaoSalvar>
         )}
       </S.InfosContainer>
     </S.Container>

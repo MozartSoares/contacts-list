@@ -2,9 +2,16 @@ import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import PerfilContato from '../../components/PerfilContato'
 import { Titulo } from '../../styles'
-import { Aside, ContainerTitulo } from './styles'
+import {
+  Aside,
+  BotaoEditar,
+  BotaoParar,
+  ContainerPerfil,
+  ContainerTitulo,
+  Mensagem
+} from './styles'
 import { RootReducer } from '../../store'
-import { editarContato } from '../../store/Contatos'
+import { editarContato, selecionarContato } from '../../store/Contatos'
 
 const BarraLateral = () => {
   const dispatch = useDispatch()
@@ -37,24 +44,38 @@ const BarraLateral = () => {
         ? 'Você possui 1 contato.'
         : `Você possui ${totalContatos} contatos.`
 
+  const PararVisualizacao = () => {
+    dispatch(selecionarContato(null))
+  }
+
   return (
     <Aside>
       <ContainerTitulo>
         <Titulo>Easy contacts</Titulo>
-        <h3>{mensagem}</h3>
+        <Mensagem>{mensagem}</Mensagem>
       </ContainerTitulo>
-      <PerfilContato
-        isEditMode={isEditMode}
-        onCancelar={handleCancelar}
-        onEditar={handleEditar}
-        onSalvar={() => {
-          setIsEditMode(false)
-        }}
-      />
-      {!isEditMode && (
-        <button type="button" onClick={handleEditar}>
-          Editar
-        </button>
+      {contatoSelecionado && (
+        <ContainerPerfil>
+          <PerfilContato
+            isEditMode={isEditMode}
+            onCancelar={handleCancelar}
+            onEditar={handleEditar}
+            onSalvar={() => {
+              setIsEditMode(false)
+            }}
+          />
+
+          {!isEditMode && (
+            <>
+              <BotaoEditar type="button" onClick={handleEditar}>
+                Editar
+              </BotaoEditar>
+              <BotaoParar type="button" onClick={PararVisualizacao}>
+                Fechar
+              </BotaoParar>
+            </>
+          )}
+        </ContainerPerfil>
       )}
     </Aside>
   )

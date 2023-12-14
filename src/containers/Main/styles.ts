@@ -35,6 +35,7 @@ export const BotaoAdicionar = styled.button`
     transform: scale(1.1);
   }
 `
+
 export const Campo = styled.input`
   padding: 8px;
   background-color: #eee;

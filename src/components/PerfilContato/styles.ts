@@ -1,11 +1,11 @@
 import styled from 'styled-components'
+import { Campo } from '../../styles'
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 66px;
 `
 
 export const InfosContainer = styled.div`
@@ -13,5 +13,13 @@ export const InfosContainer = styled.div`
   flex-direction: column;
   margin-top: 10px;
   row-gap: 5px;
-  text-align: left;
+  text-align: center;
+`
+export const CampoSelecionado = styled(Campo)`
+  width: 100%;
+  margin-top: 10px;
+`
+export const CampoSelecionadoTextarea = styled(CampoSelecionado)`
+  height: 100px;
+  resize: none;
 `
