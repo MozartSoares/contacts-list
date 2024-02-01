@@ -20,6 +20,9 @@ A aplicação é totalmente responsiva, garantindo uma experiência consistente 
 
 Este projeto foi parte de uma tarefa requisitada para a conclusão de um curso, sendo avaliado e validado por profissionais da área. Destacou as habilidades de gerenciamento de estado com Redux e reforçou conceitos fundamentais do desenvolvimento React.
 
+![image](https://github.com/MozartSoares/contacts-list/assets/142760312/bfb3f16f-0845-4f95-92d5-0e46dc923a69)
+
+
 ## Como Contribuir 🤝
 
 Contribuições são bem-vindas! Se você tem sugestões de melhorias ou encontrou algum problema, sinta-se à vontade para abrir uma issue ou enviar um pull request.
